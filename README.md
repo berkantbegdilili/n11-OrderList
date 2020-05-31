@@ -3,7 +3,7 @@
 #
 > EN: Order list filtering and display application for stores using APIs published by n11.com. XML reading and writing operations were done with AEXML framework. Apple's classes (NSMutableURLRequest, URLSession) were used to send and respond to the SOAP web service . The response was extracted with the XMLParser class.
 #
-> TR: n11.com'un yayınlamış olduğu API'leri kullanarak mağazalar için sipariş listesi filtreleme ve göstereme uygulaması. XML okuma ve yazma işlemleri AEXML iskeletiyle yapılmıştır. SOAP web servisine istek gönderilmesi ve cevaplanması için Apple'ın sınıfları kullanılmıştır (NSMutableURLRequest,URLSession). Gelen cevap XMLParser sınıfı ile ayıklanmıştır.
+> TR: n11.com'un yayınlamış olduğu API'leri kullanarak mağazalar için sipariş listesi filtreleme ve gösterme uygulaması. XML okuma ve yazma işlemleri AEXML iskeletiyle yapılmıştır. SOAP web servisine istek gönderilmesi ve cevaplanması için Apple'ın sınıfları kullanılmıştır (NSMutableURLRequest,URLSession). Gelen cevap XMLParser sınıfı ile ayıklanmıştır.
 
 #
 > Used Frameworks ; UIKIT, AEXML
