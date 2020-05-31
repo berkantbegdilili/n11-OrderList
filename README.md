@@ -12,6 +12,8 @@
 # Imagery (Görüntüler)
 ![run1](https://github.com/berkantbegdilili/n11-OrderList/blob/master/img/panel_img.png)
 
+#
+> NOT: Sipariş listesi görselindeki bazı kullanıcı verileri KVKK nedeniyle gizlenmiştir.
 
 #
 > EN: There may be errors or missed places in the algorithms written. Please report the error you found by contacting me.
