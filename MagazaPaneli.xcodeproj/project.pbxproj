@@ -3,27 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F820B0A62482EA0D00ED13BE /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F820B0A52482EA0D00ED13BE /* OrderListTableViewCell.swift */; };
+		F820B0A82482F21300ED13BE /* OrderListRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F820B0A72482F21300ED13BE /* OrderListRequestViewController.swift */; };
 		F87844F92481A4AF006F75DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87844F82481A4AF006F75DA /* AppDelegate.swift */; };
 		F87844FB2481A4AF006F75DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87844FA2481A4AF006F75DA /* SceneDelegate.swift */; };
-		F87844FD2481A4AF006F75DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87844FC2481A4AF006F75DA /* ViewController.swift */; };
 		F87845002481A4AF006F75DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87844FE2481A4AF006F75DA /* Main.storyboard */; };
 		F87845022481A4AF006F75DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87845012481A4AF006F75DA /* Assets.xcassets */; };
 		F87845052481A4AF006F75DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87845032481A4AF006F75DA /* LaunchScreen.storyboard */; };
+		F8CA720C2482952C00E43EB4 /* OrderListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CA720B2482952C00E43EB4 /* OrderListRequest.swift */; };
+		F8CA720E2482A6D900E43EB4 /* OrderListRequest.xml in Resources */ = {isa = PBXBuildFile; fileRef = F8CA720D2482A6D900E43EB4 /* OrderListRequest.xml */; };
+		F8CA72102482ADBA00E43EB4 /* OrderListResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CA720F2482ADBA00E43EB4 /* OrderListResponseViewController.swift */; };
+		F8CA72132482B26600E43EB4 /* AEXML in Frameworks */ = {isa = PBXBuildFile; productRef = F8CA72122482B26600E43EB4 /* AEXML */; };
+		F8CA72152482CC7600E43EB4 /* OrderListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CA72142482CC7600E43EB4 /* OrderListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F820B0A52482EA0D00ED13BE /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
+		F820B0A72482F21300ED13BE /* OrderListRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListRequestViewController.swift; sourceTree = "<group>"; };
 		F87844F52481A4AF006F75DA /* MagazaPaneli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagazaPaneli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87844F82481A4AF006F75DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F87844FA2481A4AF006F75DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F87844FC2481A4AF006F75DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F87844FF2481A4AF006F75DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F87845012481A4AF006F75DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F87845042481A4AF006F75DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F87845062481A4AF006F75DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8CA720B2482952C00E43EB4 /* OrderListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListRequest.swift; sourceTree = "<group>"; };
+		F8CA720D2482A6D900E43EB4 /* OrderListRequest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OrderListRequest.xml; sourceTree = "<group>"; };
+		F8CA720F2482ADBA00E43EB4 /* OrderListResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListResponseViewController.swift; sourceTree = "<group>"; };
+		F8CA72142482CC7600E43EB4 /* OrderListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +42,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CA72132482B26600E43EB4 /* AEXML in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F820B0A32482E4D700ED13BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F87845012481A4AF006F75DA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F820B0A42482E4F100ED13BE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F87844F82481A4AF006F75DA /* AppDelegate.swift */,
+				F87844FA2481A4AF006F75DA /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F820B0A92482F3AC00ED13BE /* OrderList */ = {
+			isa = PBXGroup;
+			children = (
+				F820B0A72482F21300ED13BE /* OrderListRequestViewController.swift */,
+				F8CA720F2482ADBA00E43EB4 /* OrderListResponseViewController.swift */,
+				F820B0A52482EA0D00ED13BE /* OrderListTableViewCell.swift */,
+				F8CA720B2482952C00E43EB4 /* OrderListRequest.swift */,
+				F8CA72142482CC7600E43EB4 /* OrderListResponse.swift */,
+				F8CA720D2482A6D900E43EB4 /* OrderListRequest.xml */,
+			);
+			path = OrderList;
+			sourceTree = "<group>";
+		};
 		F87844EC2481A4AF006F75DA = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +98,22 @@
 		F87844F72481A4AF006F75DA /* MagazaPaneli */ = {
 			isa = PBXGroup;
 			children = (
-				F87844F82481A4AF006F75DA /* AppDelegate.swift */,
-				F87844FA2481A4AF006F75DA /* SceneDelegate.swift */,
-				F87844FC2481A4AF006F75DA /* ViewController.swift */,
+				F820B0A42482E4F100ED13BE /* Main */,
+				F820B0A32482E4D700ED13BE /* Resources */,
+				F8CA720A2482949200E43EB4 /* OrderService */,
 				F87844FE2481A4AF006F75DA /* Main.storyboard */,
-				F87845012481A4AF006F75DA /* Assets.xcassets */,
 				F87845032481A4AF006F75DA /* LaunchScreen.storyboard */,
 				F87845062481A4AF006F75DA /* Info.plist */,
 			);
 			path = MagazaPaneli;
+			sourceTree = "<group>";
+		};
+		F8CA720A2482949200E43EB4 /* OrderService */ = {
+			isa = PBXGroup;
+			children = (
+				F820B0A92482F3AC00ED13BE /* OrderList */,
+			);
+			path = OrderService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +132,9 @@
 			dependencies = (
 			);
 			name = MagazaPaneli;
+			packageProductDependencies = (
+				F8CA72122482B26600E43EB4 /* AEXML */,
+			);
 			productName = MagazaPaneli;
 			productReference = F87844F52481A4AF006F75DA /* MagazaPaneli.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +163,9 @@
 				Base,
 			);
 			mainGroup = F87844EC2481A4AF006F75DA;
+			packageReferences = (
+				F8CA72112482B26600E43EB4 /* XCRemoteSwiftPackageReference "AEXML" */,
+			);
 			productRefGroup = F87844F62481A4AF006F75DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CA720E2482A6D900E43EB4 /* OrderListRequest.xml in Resources */,
 				F87845052481A4AF006F75DA /* LaunchScreen.storyboard in Resources */,
 				F87845022481A4AF006F75DA /* Assets.xcassets in Resources */,
 				F87845002481A4AF006F75DA /* Main.storyboard in Resources */,
@@ -138,9 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87844FD2481A4AF006F75DA /* ViewController.swift in Sources */,
+				F8CA72102482ADBA00E43EB4 /* OrderListResponseViewController.swift in Sources */,
+				F8CA72152482CC7600E43EB4 /* OrderListResponse.swift in Sources */,
+				F8CA720C2482952C00E43EB4 /* OrderListRequest.swift in Sources */,
+				F820B0A62482EA0D00ED13BE /* OrderListTableViewCell.swift in Sources */,
 				F87844F92481A4AF006F75DA /* AppDelegate.swift in Sources */,
 				F87844FB2481A4AF006F75DA /* SceneDelegate.swift in Sources */,
+				F820B0A82482F21300ED13BE /* OrderListRequestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F8CA72112482B26600E43EB4 /* XCRemoteSwiftPackageReference "AEXML" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tadija/AEXML.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F8CA72122482B26600E43EB4 /* AEXML */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8CA72112482B26600E43EB4 /* XCRemoteSwiftPackageReference "AEXML" */;
+			productName = AEXML;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F87844ED2481A4AF006F75DA /* Project object */;
 }

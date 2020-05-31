@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MagazaPaneli
 //
-//  Created by Berkant Beğdilili on 29.05.2020.
+//  Created by Berkant Beğdilili on 30.05.2020.
 //  Copyright © 2020 Berkant Beğdilili. All rights reserved.
 //
 

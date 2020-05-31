@@ -1,24 +1,300 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7mW-M5-l6j">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sipariş Listesi-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sipariş Listesi" id="BYZ-38-t0r" customClass="OrderListResponseViewController" customModule="MagazaPaneli" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="efB-Ud-gt8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderListTableViewCell" id="OC2-cL-Jf2" customClass="OrderListTableViewCell" customModule="MagazaPaneli" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OC2-cL-Jf2" id="yF4-Il-syP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="G9Z-VW-2tg">
+                                                    <rect key="frame" x="5" y="10" width="404" height="180"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="203" translatesAutoresizingMaskIntoConstraints="NO" id="pqD-qb-FzV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="306" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TC No:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1t9-Fi-p0i">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="53" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oi-yF-JGe">
+                                                                    <rect key="frame" x="256" y="0.0" width="50" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="ket-2Q-JV9">
+                                                            <rect key="frame" x="0.0" y="32" width="306" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sipariş Oluşturma Tarihi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGL-04-PTj">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="186" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAd-Kr-4Qb">
+                                                                    <rect key="frame" x="256" y="0.0" width="50" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="osJ-J0-ZI4">
+                                                            <rect key="frame" x="0.0" y="64" width="305.5" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sipariş n11 ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-qF-igk">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="105.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELI-L2-B2g">
+                                                                    <rect key="frame" x="255.5" y="0.0" width="50" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="L6Y-yP-Tsu">
+                                                            <rect key="frame" x="0.0" y="96" width="305.5" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sipariş Numarası:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laS-7Y-RHq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="133.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8o-bl-mck">
+                                                                    <rect key="frame" x="255.5" y="0.0" width="50" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="156" translatesAutoresizingMaskIntoConstraints="NO" id="Oqn-jx-tuw">
+                                                            <rect key="frame" x="0.0" y="128" width="305.5" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödeme Türü:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJD-84-JDp">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="99.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNa-aW-KEV">
+                                                                    <rect key="frame" x="255.5" y="0.0" width="50" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="135" translatesAutoresizingMaskIntoConstraints="NO" id="s18-Gi-3mi">
+                                                            <rect key="frame" x="0.0" y="160" width="307" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sipariş Durumu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53v-CY-oBv">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="122" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvC-GP-ZTg">
+                                                                    <rect key="frame" x="257" y="0.0" width="50" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="G9Z-VW-2tg" firstAttribute="top" secondItem="yF4-Il-syP" secondAttribute="top" constant="10" id="5UJ-zi-7Sz"/>
+                                                <constraint firstAttribute="bottom" secondItem="G9Z-VW-2tg" secondAttribute="bottom" constant="10" id="Cd3-8l-kNo"/>
+                                                <constraint firstItem="G9Z-VW-2tg" firstAttribute="leading" secondItem="yF4-Il-syP" secondAttribute="leading" constant="5" id="UPg-Lj-14Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="G9Z-VW-2tg" secondAttribute="trailing" constant="5" id="pLj-5e-bn4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="citizenshipId" destination="2Oi-yF-JGe" id="zvU-5M-IcQ"/>
+                                            <outlet property="createDate" destination="VAd-Kr-4Qb" id="SED-fh-B7P"/>
+                                            <outlet property="orderId" destination="ELI-L2-B2g" id="DWO-Kw-LbX"/>
+                                            <outlet property="orderNumber" destination="v8o-bl-mck" id="1qn-Wo-OUg"/>
+                                            <outlet property="orderStatus" destination="NvC-GP-ZTg" id="Pfn-qX-8Qd"/>
+                                            <outlet property="paymentType" destination="QNa-aW-KEV" id="V2b-yE-sdR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="efB-Ud-gt8" secondAttribute="trailing" id="NXv-zh-A7N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="efB-Ud-gt8" secondAttribute="bottom" id="VCm-4o-sJ5"/>
+                            <constraint firstItem="efB-Ud-gt8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a3K-GJ-clT"/>
+                            <constraint firstItem="efB-Ud-gt8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kas-Qk-YNp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Sipariş Listesi" id="Xjx-9r-sdK"/>
+                    <connections>
+                        <outlet property="tableView" destination="efB-Ud-gt8" id="HQi-K0-sXu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2273.913043478261" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UUh-a7-NFy">
+            <objects>
+                <viewController id="kah-nf-VaT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tlX-mQ-VQg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nqQ-XU-xDx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wa6-QU-KBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3110" y="147"/>
+        </scene>
+        <!--Sipariş Listeleme-->
+        <scene sceneID="yGN-v3-kUP">
+            <objects>
+                <viewController title="Sipariş Listeleme" id="2nO-Ak-022" customClass="OrderListRequestViewController" customModule="MagazaPaneli" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kys-xf-3Pe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="54k-gd-lMU">
+                                <rect key="frame" x="50" y="118" width="314" height="518.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZD-KT-TcS">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Şifre*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbL-wG-syv">
+                                        <rect key="frame" x="0.0" y="97" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sipariş Durumu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-o5-o3t">
+                                        <rect key="frame" x="0.0" y="194" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sipariş Numarası" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pT1-2o-qZD">
+                                        <rect key="frame" x="0.0" y="290.5" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sipariş Oluşturma Başlangıç Tarihi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gkv-wj-ehN">
+                                        <rect key="frame" x="0.0" y="387.5" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sipariş Oluşturma Bitiş Tarihi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-We-Csh">
+                                        <rect key="frame" x="0.0" y="484.5" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* olan alanlar zorunlu alanlardır." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOc-hj-A0g">
+                                <rect key="frame" x="0.0" y="841.5" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knJ-2h-ya8">
+                                <rect key="frame" x="150" y="661.5" width="114" height="30"/>
+                                <state key="normal" title="LİSTELE"/>
+                                <connections>
+                                    <action selector="listing:" destination="2nO-Ak-022" eventType="touchUpInside" id="nne-MV-5YW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JtT-oE-8mB" firstAttribute="bottom" secondItem="fOc-hj-A0g" secondAttribute="bottom" id="43y-Ls-BZz"/>
+                            <constraint firstItem="knJ-2h-ya8" firstAttribute="leading" secondItem="JtT-oE-8mB" secondAttribute="leading" constant="150" id="7Ec-BT-yUM"/>
+                            <constraint firstItem="JtT-oE-8mB" firstAttribute="trailing" secondItem="54k-gd-lMU" secondAttribute="trailing" constant="50" id="89O-Cg-eXZ"/>
+                            <constraint firstItem="fOc-hj-A0g" firstAttribute="top" secondItem="knJ-2h-ya8" secondAttribute="bottom" constant="150" id="9Lp-H4-bZ6"/>
+                            <constraint firstItem="fOc-hj-A0g" firstAttribute="leading" secondItem="JtT-oE-8mB" secondAttribute="leading" id="9VZ-Tk-J9k"/>
+                            <constraint firstItem="JtT-oE-8mB" firstAttribute="trailing" secondItem="knJ-2h-ya8" secondAttribute="trailing" constant="150" id="D4g-yM-9q9"/>
+                            <constraint firstItem="knJ-2h-ya8" firstAttribute="top" secondItem="54k-gd-lMU" secondAttribute="bottom" constant="25" id="b7H-15-XSE"/>
+                            <constraint firstItem="54k-gd-lMU" firstAttribute="leading" secondItem="JtT-oE-8mB" secondAttribute="leading" constant="50" id="fmy-TM-E5F"/>
+                            <constraint firstItem="54k-gd-lMU" firstAttribute="top" secondItem="JtT-oE-8mB" secondAttribute="top" constant="30" id="h4t-8m-KD9"/>
+                            <constraint firstItem="JtT-oE-8mB" firstAttribute="trailing" secondItem="fOc-hj-A0g" secondAttribute="trailing" id="p6Z-j1-MlU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JtT-oE-8mB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sipariş Listeleme" id="Nl2-f4-tZO"/>
+                    <connections>
+                        <outlet property="appKey" destination="YZD-KT-TcS" id="BOm-vi-1s8"/>
+                        <outlet property="appSecret" destination="hbL-wG-syv" id="ehw-nl-yAQ"/>
+                        <outlet property="endDate" destination="Laj-We-Csh" id="Alm-5K-cbZ"/>
+                        <outlet property="orderNumber" destination="pT1-2o-qZD" id="Orh-9M-zp9"/>
+                        <outlet property="orderStatus" destination="jf7-o5-o3t" id="iWK-Qk-ZRf"/>
+                        <outlet property="startDate" destination="gkv-wj-ehN" id="r3y-4g-nmw"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="requestToResponse" id="vr8-64-6Yo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQ0-CD-Uco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1521.7391304347827" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cEt-Ua-xdw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7mW-M5-l6j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vQM-bf-Xea">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2nO-Ak-022" kind="relationship" relationship="rootViewController" id="fik-9R-awK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lx7-5q-P7x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611.59420289855075" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
