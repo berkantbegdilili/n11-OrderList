@@ -1,4 +1,4 @@
-# n11.com Store Order List for iOS
+# n11.com Store Order List for iOS (Prototype)
 
 #
 > EN: Order list filtering and display application for stores using APIs published by n11.com. XML reading and writing operations were done with AEXML framework. Apple's classes (NSMutableURLRequest, URLSession) were used to send and respond to the SOAP web service . The response was extracted with the XMLParser class.
