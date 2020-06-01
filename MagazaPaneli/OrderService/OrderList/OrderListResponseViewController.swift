@@ -67,7 +67,10 @@ class OrderListResponseViewController: UIViewController {
                     let parser = XMLParser(data: data!)
                     parser.delegate = self
                     parser.parse()
-                    self.tableView.reloadData()
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                     
                     if let e = error{
                         DispatchQueue.main.async {
